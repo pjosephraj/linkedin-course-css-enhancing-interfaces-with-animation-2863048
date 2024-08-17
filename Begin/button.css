@@ -34,10 +34,61 @@ body {
   line-height: 1;
   overflow: hidden;
   padding: 1.2rem 2.4rem;
+  cursor: pointer;
   transition: all 0.3s ease-out;
 }
 /* Button 1 */
+.button_1:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #f0c808;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform-origin: bottom left;
+  transform: translateX(-20rem);
+  transition: transform .5s ease-in-out
+}
+
+.button_1:hover {
+  color: #f2f2f2;
+  background-color: transparent;
+}
+
+.button_1:hover:before {
+  transform: translateX(0);
+}
 
 /* Button 2 */
+.button_2:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #f0c808;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform-origin: top center;
+  transform: translateY(-100%);
+  transition: transform .2s ease-out
+}
+
+.button_2:hover {
+  color: #f2f2f2;
+  background-color: transparent;
+}
+
+.button_2:hover:before {
+  transform: translateY(0);
+}
+
 
 /* Button 3 */
+.button_3:hover {
+  transform: scale(1.1) translateY(-2px);
+  background-color: #f0c808;
+  color: #f2f2f2;
+}
